@@ -5,7 +5,7 @@ local twig_templates = {}
 local function load_templates()
   twig_templates = {}
 
-  local handle = io.popen('fd twig templates')
+  local handle = io.popen('fd twig templates 2>/dev/null')
   local result = handle:read("*a")
   handle:close()
 
